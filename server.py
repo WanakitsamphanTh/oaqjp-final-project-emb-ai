@@ -15,5 +15,9 @@ def emotion_detect():
     output = output + f"The dominant emotion is {dom_emotion}"
     return output
 
+@app.route("/")
+def render_index():
+    return render_template('index.html')
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
